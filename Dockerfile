@@ -11,5 +11,5 @@ FROM scratch
 COPY --from=certs /etc/ssl/certs/* /etc/ssl/certs/
 COPY --from=build /go/src/github.com/ksonnet/ksonnet/ks /bin/ks
 VOLUME /tmp
-
+EXPOSE 8080
 ENTRYPOINT ["/bin/ks"]
